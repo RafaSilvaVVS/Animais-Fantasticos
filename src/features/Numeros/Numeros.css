@@ -1,0 +1,20 @@
+.gridNumeros{
+  grid-column: 4 / -1;
+}
+
+.listaNumeros{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.listaNumeros li h2{
+  font-size: 28px;
+  margin: 20px 0px;
+}
+
+.listaNumeros li p{
+  color: #e54;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
