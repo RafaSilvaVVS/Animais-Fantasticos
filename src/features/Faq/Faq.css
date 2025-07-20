@@ -1,0 +1,28 @@
+.gridFaq{
+  grid-column: 4 / -1;
+}
+
+.listaDefinicao dt{
+  color: #e54;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.listaDefinicao dd{
+margin: 20px 0px;
+}
+.listaDefinicao dt::before{
+  content: '';
+  background-color: #fb5;
+  width: 25px;
+  height: 8px;
+  display: inline-block;
+}
+
+.listaDefinicao dd{
+  margin-left: 40px;
+}
