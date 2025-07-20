@@ -9,7 +9,6 @@ const Animais = () => {
   function useClickImg(index) {
     setindexClicado(index);
   }
-  console.log(indexClicado);
   return (
     <>
       <main className="gridAnimais">
