@@ -1,8 +1,8 @@
 import React from 'react';
 import './Titulo.css';
 
-const Titulo = () => {
-  return <h1 className="tituloPrincipal">Animais Fantásticos</h1>;
+const Titulo = ({ texto }) => {
+  return <h1 className="tituloPrincipal">{texto}</h1>;
 };
 
 export default Titulo;

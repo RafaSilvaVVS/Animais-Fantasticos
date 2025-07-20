@@ -13,7 +13,7 @@ const Faq = () => {
 
   return (
     <article className="gridFaq">
-      <Titulo />
+      <Titulo texto="FAQ" />
       <dl className="listaDefinicao">
         <dt onClick={() => ativarLista(0)}>Qual a idade dos animais?</dt>
         <dd style={{ display: ativo[0] === true ? 'block' : 'none' }}>

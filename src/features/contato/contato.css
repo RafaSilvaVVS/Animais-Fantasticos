@@ -1,0 +1,30 @@
+.gridContato{
+  grid-column: 4  / -1;
+}
+
+.listaContato li:not(:first-child){
+  margin: 20px 0px;
+}
+
+.listaContato li {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.listaContato li::before{
+  content:  '';
+  background-color: #fb5;
+  width: 20px;
+  height: 4px;
+}
+
+.contato-div img{
+  width: 400px;
+}
+
+.contato-div{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 30px;
+}
