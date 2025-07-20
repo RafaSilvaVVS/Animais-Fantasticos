@@ -5,6 +5,12 @@
   gap: 30px;
 }
 
+@media(max-width:650px){
+  .grid2Col{
+    grid-template-columns: auto;
+  }
+}
+
 .gridAnimais{
   grid-column: 4 /  -1;
   margin-top: 60px;

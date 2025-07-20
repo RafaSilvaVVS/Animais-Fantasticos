@@ -28,3 +28,9 @@
   grid-template-columns: auto 1fr;
   gap: 30px;
 }
+
+@media(max-width:650px){
+  .contato-div{
+    grid-template-columns: auto;
+  }
+}

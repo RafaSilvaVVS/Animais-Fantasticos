@@ -5,16 +5,18 @@ import Faq from '../features/Faq/Faq';
 import './Home.css';
 import Numeros from '../features/Numeros/Numeros';
 import Contato from '../features/contato/Contato';
+import Footer from '../features/Footer/Footer';
 
 const Home = () => {
   return (
-    <div className="gridHome">
+    <main className="gridHome">
       <Header />
       <Animais />
       <Faq />
       <Numeros />
       <Contato />
-    </div>
+      <Footer />
+    </main>
   );
 };
 
