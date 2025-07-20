@@ -12,7 +12,7 @@ const Animais = () => {
   return (
     <>
       <main className="gridAnimais">
-        <Titulo />
+        <Titulo texto="Animais fantásticos" />
         <div className="grid2Col">
           <ul className="listaAnimais">
             <li onClick={() => useClickImg(0)}>

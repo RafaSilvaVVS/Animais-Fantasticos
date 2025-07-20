@@ -4,6 +4,7 @@ import Animais from '../features/Animais';
 import Faq from '../features/Faq/Faq';
 import './Home.css';
 import Numeros from '../features/Numeros/Numeros';
+import Contato from '../features/contato/Contato';
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <Animais />
       <Faq />
       <Numeros />
+      <Contato />
     </div>
   );
 };
