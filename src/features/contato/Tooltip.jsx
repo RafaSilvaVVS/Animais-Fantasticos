@@ -2,7 +2,6 @@ import React from 'react';
 import './Tooltip.css';
 
 const Tooltip = ({ offX, offY }) => {
-  console.log(offX, offY);
   return (
     <div
       className="tooltip"

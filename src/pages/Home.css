@@ -2,3 +2,10 @@
   display: grid;
   grid-template-columns: 50px 20px 200px 1fr 1fr;
 }
+
+@media(max-width:500px){
+ .gridHome{
+  grid-template-columns: auto;
+ } 
+}
+
