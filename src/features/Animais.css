@@ -1,0 +1,41 @@
+
+.grid2Col{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 30px;
+}
+
+.gridAnimais{
+  grid-column: 4 /  -1;
+  margin-top: 60px;
+  gap: 30px;
+}
+
+.listaAnimais{
+  height: 500px;
+  overflow-y: scroll;
+}
+
+.conteudoAnimais p{
+  margin: 0px  0px 18px 0px;
+  max-width: 50ch;
+  font-size: 18px;
+}
+
+@keyframes ShowTop {
+  from{
+    opacity: 0;
+    transform: translate3d(0,0 0);
+
+  }
+  to{
+    opacity: 1;
+    transform: translate3d(20px,40px 0px);
+  }
+  
+  
+}
+
+.show-down{
+  animation: 1s forwards ShowTop;
+}
