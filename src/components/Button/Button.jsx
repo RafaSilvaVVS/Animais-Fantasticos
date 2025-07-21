@@ -2,7 +2,7 @@ import React from 'react';
 import './Button.css';
 
 const Button = () => {
-  return <button>Entrar</button>;
+  return <button class="btnForm">Entrar</button>;
 };
 
 export default Button;

@@ -9,7 +9,7 @@
   margin-top: 30px;
 }
 
-@media(max-width:500px){
+@media(max-width:650px){
   .tituloPrincipal{
     margin-left: 0px;
   }
