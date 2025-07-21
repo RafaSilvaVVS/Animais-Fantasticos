@@ -1,9 +1,9 @@
 import React from 'react';
 import './Links.css';
 
-const Links = ({ href, texto }) => {
+const Links = ({ href, texto, ...props }) => {
   return (
-    <a className="linkHeader" href={href}>
+    <a onClick={props.onClick} className="linkHeader" href={href}>
       {texto}
     </a>
   );
