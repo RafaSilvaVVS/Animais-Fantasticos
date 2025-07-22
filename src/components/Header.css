@@ -5,6 +5,10 @@
   grid-column: 4 / -1;
 }
 
+.ulMenu{
+  display: flex;
+}
+
 
 @media(max-width:650px){
   .header{
@@ -61,9 +65,52 @@
   width: fit-content;
   left: 0px;
   height: fit-content;
-  padding: 12px;
   position: absolute;
-  width: 120px;
+  width: 140px;
   top: 0px;
   box-shadow: 3px 4px 8px 1px #333333aa;
+}
+
+.divMobile button{
+  margin: 12px;
+}
+
+.divMobile li a{
+  padding: 4px 12px;
+}
+
+.divMobile li a:hover{
+  color: #fff;
+}
+
+.subMenu{
+  position: absolute;
+  right: -40px;
+  top: 40px;
+  background-color: #e54;
+  border: 2px solid #333;
+}
+
+.subMenu li:first-child{
+  position: relative;
+}
+
+.subMenu li:first-child:before{
+  content: "";
+  top: -15px;
+  rotate: -50deg;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: 20px;
+  display: block;
+  border-top: 2px solid transparent;
+  border-right: 2px solid transparent;
+  background-color: #e54;
+}
+
+.subMenu li a{
+  padding: 4px 12px;
+  margin: 10px 0px;
+  display: block;
 }

@@ -7,7 +7,19 @@ import Menu from '../components/menuMobile/Menu';
 const Header = () => {
   const [modal, setModal] = React.useState(false);
   const [mobile, setMobile] = React.useState(false);
+  const [menu, setMenu] = React.useState(false);
   const menuDiv = React.useRef();
+  const subMenu = React.useRef();
+
+  function hoverSubMenu() {
+    setMenu(true);
+  }
+
+  function mouseFora() {
+    if (menu) {
+      setMenu(false);
+    }
+  }
 
   function modalAbrir(e) {
     e.preventDefault();
@@ -18,19 +30,15 @@ const Header = () => {
     setMobile((prev) => !prev);
   }
 
-  function handleClick({ target }) {
-    if (target.contains(menuDiv.current)) {
-      setMobile(false);
-    }
-  }
-
   function clickFora({ target }) {
     if (!menuDiv.current.contains(target)) {
       setMobile(false);
     }
   }
 
-  window.addEventListener('click', clickFora);
+  if (mobile) {
+    window.addEventListener('click', clickFora);
+  }
 
   return (
     <header className="header">
@@ -53,9 +61,35 @@ const Header = () => {
         <ul className="ulMenu">
           <li>
             <Links href="#animais" texto="Animais" />
-            <Links href="#sobre" texto="Sobre" />
+          </li>
+          <ul style={{ position: 'relative' }}>
+            <li onMouseEnter={hoverSubMenu} className="hoverSubMenu">
+              <Links href="#sobre" texto="Sobre" />
+            </li>
+            {menu && (
+              <ul onMouseLeave={mouseFora} ref={subMenu} className="subMenu">
+                <li>
+                  <Links href="#empresa" texto="A empresa" />
+                </li>
+                <li>
+                  <Links href="#equipe" texto="Equipe" />
+                </li>
+                <li>
+                  <Links href="#socios" texto="Sócios" />
+                </li>
+                <li>
+                  <Links href="#investidores" texto="Investidores" />
+                </li>
+              </ul>
+            )}
+          </ul>
+          <li>
             <Links href="#faq" texto="Faq" />
+          </li>
+          <li>
             <Links href="#Contato" texto="Contato" />
+          </li>
+          <li>
             <Links href="" texto="Login" onClick={modalAbrir} />
           </li>
         </ul>
