@@ -6,6 +6,7 @@ import './Home.css';
 import Numeros from '../features/Numeros/Numeros';
 import Contato from '../features/contato/Contato';
 import Footer from '../features/Footer/Footer';
+import Slider from '../features/slider/Slider';
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <Header />
       <Animais />
       <Faq />
+      <Slider />
       <Numeros />
       <Contato />
       <Footer />

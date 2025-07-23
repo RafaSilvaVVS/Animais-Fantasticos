@@ -1,0 +1,48 @@
+.secaoSlider{
+  grid-column: 3 / -1;
+  margin: 20px 0px;
+  overflow: hidden;
+}
+
+@media(max-width:650px){
+  .secaoSlider{
+    overflow: hidden;
+    background-color: azure;
+    grid-column: 2 / -1;
+    max-width: 100vw;
+    width: 100vw;
+  }
+  .ulSlider li img{
+    max-width: 400px !important;
+  }
+}
+
+.ulSlider{
+  display: flex;
+  max-width: 100%;
+  width: 100%;
+  overflow: visible;
+}
+
+
+.ulSlider li {
+  flex:  0  0 100%;
+}
+
+.ulSlider img{
+  max-width: 100%;
+}
+
+.olnav{
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 20px;
+  justify-content: center;
+}
+
+.olnav li img{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
