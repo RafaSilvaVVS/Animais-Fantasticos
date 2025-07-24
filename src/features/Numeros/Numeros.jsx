@@ -8,6 +8,24 @@ const Numeros = ({ numeros }) => {
   const esquilosNumeros = useRef(null);
   const ursosNumeros = useRef(null);
   const [number, setNumero] = React.useState([]);
+  const refObserver = React.useRef();
+  const [naTela, setNaTela] = React.useState(false);
+
+  React.useEffect(() => {
+    const scroll = () => {
+      const topo = refObserver.current.getBoundingClientRect().top;
+
+      if (topo <= 300) {
+        setNaTela(true);
+      }
+    };
+
+    window.addEventListener('scroll', scroll);
+
+    return () => {
+      window.removeEventListener('scroll', scroll);
+    };
+  }, [number]);
 
   React.useEffect(() => {
     setNumero([
@@ -20,7 +38,6 @@ const Numeros = ({ numeros }) => {
 
   React.useEffect(() => {
     let start = 0;
-
     number.map((item) => {
       const total = +item.innerText;
       const incremento = Math.ceil(Number(item.innerText / 50));
@@ -34,12 +51,12 @@ const Numeros = ({ numeros }) => {
         }
       }, 70);
     });
-  }, [number]);
+  }, [naTela]);
 
   return (
     <section ref={numeros} className="gridNumeros">
       <Titulo text="Números" />
-      <ul className="listaNumeros">
+      <ul ref={refObserver} className="listaNumeros">
         <li>
           <h2>Lobos</h2>
           <p ref={lobosNumeros}>4874</p>
