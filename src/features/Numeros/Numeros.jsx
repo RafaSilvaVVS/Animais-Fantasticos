@@ -55,7 +55,7 @@ const Numeros = ({ numeros }) => {
 
   return (
     <section ref={numeros} className="gridNumeros">
-      <Titulo text="Números" />
+      <Titulo texto="Números" />
       <ul ref={refObserver} className="listaNumeros">
         <li>
           <h2>Lobos</h2>
