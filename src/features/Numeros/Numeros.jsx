@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import './Numeros.css';
 import Titulo from '../../components/TituloPrincipal/Titulo';
 
-const Numeros = () => {
+const Numeros = ({ numeros }) => {
   const lobosNumeros = useRef(null);
   const raposasNumeros = useRef(null);
   const esquilosNumeros = useRef(null);
@@ -37,7 +37,7 @@ const Numeros = () => {
   }, [number]);
 
   return (
-    <section className="gridNumeros">
+    <section ref={numeros} className="gridNumeros">
       <Titulo text="Números" />
       <ul className="listaNumeros">
         <li>

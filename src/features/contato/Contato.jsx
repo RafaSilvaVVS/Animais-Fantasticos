@@ -5,7 +5,7 @@ import Tooltip from './tooltip';
 import './Contato.css';
 import './Tooltip.css';
 
-const Contato = () => {
+const Contato = ({ contato }) => {
   const [offX, setOffX] = React.useState(null);
   const [offY, setOffY] = React.useState(null);
   const [mouseOver, setMouseOver] = React.useState(false);
@@ -21,7 +21,7 @@ const Contato = () => {
   }
 
   return (
-    <article className="gridContato">
+    <article ref={contato} className="gridContato">
       <Titulo texto="Contato" />
       <div className="contato-div">
         <img
