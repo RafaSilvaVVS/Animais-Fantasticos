@@ -2,7 +2,7 @@ import React from 'react';
 import './Faq.css';
 import Titulo from '../../components/TituloPrincipal/Titulo';
 
-const Faq = () => {
+const Faq = ({ faq }) => {
   const [ativo, setAtivo] = React.useState([true, false, false, false]);
 
   function ativarLista(index) {
@@ -12,7 +12,7 @@ const Faq = () => {
   }
 
   return (
-    <article className="gridFaq">
+    <article ref={faq} className="gridFaq">
       <Titulo texto="FAQ" />
       <dl className="listaDefinicao">
         <dt onClick={() => ativarLista(0)}>Qual a idade dos animais?</dt>

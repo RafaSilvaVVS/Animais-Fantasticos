@@ -3,7 +3,7 @@ import './Slider.css';
 import Imagens from '../../components/slider/Imagens';
 import ImgsNav from '../../components/slider/navImgs/ImgsNav';
 
-const Slider = () => {
+const Slider = ({ slider }) => {
   const [index, setIndex] = React.useState(0);
   const [pressionando, setPressionando] = React.useState(false);
   const [startX, setStartX] = React.useState(0);
@@ -57,7 +57,7 @@ const Slider = () => {
   }, [index]);
 
   return (
-    <section className="secaoSlider">
+    <section ref={slider} className="secaoSlider">
       <ol className="olnav">
         <li onClick={() => navImg(0)}>
           <ImgsNav

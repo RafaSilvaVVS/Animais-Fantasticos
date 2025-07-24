@@ -4,14 +4,15 @@ import './Animais.css';
 import ParagrafoAnimais from '../components/conteudoAnimais/ParagrafoAnimais';
 import TituloAnimais from '../components/NomeAnimais/TituloAnimais';
 import Titulo from '../components/TituloPrincipal/Titulo';
-const Animais = () => {
+const Animais = ({ animais }) => {
   const [indexClicado, setindexClicado] = React.useState(0);
   function useClickImg(index) {
     setindexClicado(index);
   }
+
   return (
     <>
-      <main className="gridAnimais">
+      <main ref={animais} className="gridAnimais">
         <Titulo texto="Animais fantásticos" />
         <div className="grid2Col">
           <ul className="listaAnimais">
