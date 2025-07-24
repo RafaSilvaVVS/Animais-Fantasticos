@@ -2,7 +2,8 @@
   position: relative;
 }
 
-.ulMenuMobile li a{
+.ulMenuMobile  li a{
+  padding-left: 20px;
   display: block;
   margin: 10px 0px;
 }

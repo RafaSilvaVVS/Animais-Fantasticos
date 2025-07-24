@@ -4,12 +4,21 @@ import './Header.css';
 import Modal from './Modal/Modal';
 import Menu from '../components/menuMobile/Menu';
 
-const Header = () => {
+const Header = ({ secaoTopo }) => {
   const [modal, setModal] = React.useState(false);
   const [mobile, setMobile] = React.useState(false);
   const [menu, setMenu] = React.useState(false);
   const menuDiv = React.useRef();
   const subMenu = React.useRef();
+
+  function scrollAutomatico(e, index) {
+    e.preventDefault();
+    const topo = secaoTopo[index].getBoundingClientRect().top;
+    window.scrollTo({
+      top: topo,
+      behavior: 'smooth',
+    });
+  }
 
   function hoverSubMenu() {
     setMenu(true);
@@ -55,11 +64,11 @@ const Header = () => {
         >
           MENU
         </button>
-        {mobile && <Menu />}
+        {mobile && <Menu secaoTopo={secaoTopo} setModal={setModal} />}
       </div>
       <nav>
         <ul className="ulMenu">
-          <li>
+          <li onClick={(e) => scrollAutomatico(e, 0)}>
             <Links href="#animais" texto="Animais" />
           </li>
           <ul style={{ position: 'relative' }}>
@@ -83,10 +92,10 @@ const Header = () => {
               </ul>
             )}
           </ul>
-          <li>
+          <li onClick={(e) => scrollAutomatico(e, 1)}>
             <Links href="#faq" texto="Faq" />
           </li>
-          <li>
+          <li onClick={(e) => scrollAutomatico(e, 2)}>
             <Links href="#Contato" texto="Contato" />
           </li>
           <li>
