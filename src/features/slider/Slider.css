@@ -2,12 +2,12 @@
   grid-column: 3 / -1;
   margin: 20px 0px;
   overflow: hidden;
+
 }
 
 @media(max-width:650px){
   .secaoSlider{
     overflow: hidden;
-    background-color: azure;
     grid-column: 2 / -1;
     max-width: 100vw;
     width: 100vw;
@@ -30,6 +30,7 @@
 }
 
 .ulSlider img{
+  padding-right: 20px;
   max-width: 100%;
 }
 

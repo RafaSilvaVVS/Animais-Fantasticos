@@ -13,13 +13,14 @@
 
 .gridAnimais{
   grid-column: 4 /  -1;
-  margin-top: 60px;
+  margin-top: 10px;
   gap: 30px;
 }
 
 .listaAnimais{
   height: 500px;
   overflow-y: scroll;
+  width: fit-content;
 }
 
 .conteudoAnimais p{
