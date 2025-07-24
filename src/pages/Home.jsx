@@ -16,6 +16,11 @@ const Home = () => {
   const numeros = React.useRef();
   const contato = React.useRef();
 
+  const [secaoTopo, setSecaoTop] = React.useState([]);
+  React.useEffect(() => {
+    setSecaoTop([...secaoTopo, animais.current, faq.current, contato.current]);
+  }, [animais, faq, contato]);
+
   React.useEffect(() => {
     setSecao([
       ...secao,
@@ -45,7 +50,7 @@ const Home = () => {
 
   return (
     <main className="gridHome">
-      <Header />
+      <Header secaoTopo={secaoTopo} />
       <Animais animais={animais} />
       <Faq faq={faq} />
       <Slider slider={slider} />
